@@ -1,0 +1,67 @@
+@import 'reset';
+html {
+	font-size: 20px;
+}
+html,
+body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.navbar {
+	width: 100%;
+	display: flex;
+	height: @navbarH;
+	line-height: @navbarH;
+	position: absolute;
+	top: 0;
+	z-index: 100;
+	color: #fff;
+	background-color: @navbarC;
+	.navbar-left {
+		flex: 1;
+		text-align: left;
+		padding-left: 0.5rem;
+	}
+	.navbar-center {
+		flex: 1;
+		text-align: center;
+	}
+	.navbar-right {
+		flex: 1;
+		text-align: right;
+		padding-right: 0.5rem;
+	}
+}
+.toolbar {
+	display: flex;
+	width: 100%;
+	height: @toolbarH;
+	line-height: @toolbarH;
+	position: absolute;
+	bottom: 0;
+	z-index: 100;
+	text-align: center;
+	background-color: @toolbarC;
+	border-top: 1px solid #ccc;
+	a {
+		display: block;
+		flex: 1;
+	}
+}
+.page-content {
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	overflow: auto;
+	&.navbar-fixed {
+		//有navbar时给page-content加padding-top,避免遮挡
+		padding-top: @navbarH; 
+	}
+	&.toolbar-fixed {
+		//有toolbar时给page-content加padding-bottom
+		padding-bottom: @toolbarH; 
+	}
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<title>Document</title>
+	<link rel="stylesheet" href="public/css/app.css">
+	<style>
+		li{height:40px;}
+	</style>
+</head>
+<body>
+<div class="navbar">
+	<div class="navbar-left">
+		左
+	</div>
+	<div class="navbar-center">
+		中
+	</div>
+	<div class="navbar-right">
+		右
+	</div>
+</div>
+<div class="page-content navbar-fixed toolbar-fixed">
+	<ul>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+	</ul>
+</div>
+<div class="toolbar">
+	<a href="">link1</a>
+	<a href="">link2</a>
+	<a href="">link3</a>
+</div>
+<script>        
+        (function (doc, win) {    
+            var docEl = doc.documentElement,    
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',    
+            recalc = function () {    
+            var clientWidth = docEl.clientWidth;    
+            if (!clientWidth) return;    
+            docEl.style.fontSize = 20 * (clientWidth / 375) + 'px';    
+        };    
+        if (!doc.addEventListener) return;    
+        win.addEventListener(resizeEvt, recalc, false);    
+        doc.addEventListener('DOMContentLoaded', recalc, false);    
+        })(document, window);    
+    </script>	
+</body>
+</html>
